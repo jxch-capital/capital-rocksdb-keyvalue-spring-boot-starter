@@ -12,9 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.keyvalue.core.KeyValueOperations;
 import org.springframework.data.keyvalue.core.KeyValueTemplate;
+import org.springframework.data.map.repository.config.EnableMapRepositories;
 
 @Data
 @Configuration
+@EnableMapRepositories(keyValueTemplateRef = RocksDBAutoConfig.ROCKSDB_TEMPLATE)
 public class RocksDBAutoConfig {
     public static final String ROCKSDB_TEMPLATE = "rocksdbKeyValueTemplate";
     @Value("${spring.rocksdb.path:rocksdb}")
