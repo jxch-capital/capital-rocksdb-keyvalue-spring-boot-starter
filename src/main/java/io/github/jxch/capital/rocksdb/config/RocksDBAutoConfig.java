@@ -16,7 +16,7 @@ import org.springframework.data.keyvalue.core.KeyValueTemplate;
 @Data
 @Configuration
 public class RocksDBAutoConfig {
-    public static final String ROCKSDB_TEMPLATE = "rocksdbKeyValueTemplate";
+    public static final String ROCKSDB_KV_TEMPLATE = "rocksdbKeyValueTemplate";
     @Value("${spring.rocksdb.path:rocksdb}")
     private String path;
 
@@ -29,8 +29,8 @@ public class RocksDBAutoConfig {
         return RocksDB.open(options, path);
     }
 
-    @Bean(ROCKSDB_TEMPLATE)
-    @ConditionalOnMissingBean(name = ROCKSDB_TEMPLATE)
+    @Bean(ROCKSDB_KV_TEMPLATE)
+    @ConditionalOnMissingBean(name = ROCKSDB_KV_TEMPLATE)
     public KeyValueOperations rocksdbKeyValueTemplate(RocksDBKeyValueAdapter adapter) {
         return new KeyValueTemplate(adapter);
     }

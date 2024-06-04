@@ -4,6 +4,17 @@ RocksDB 集成 Spring Data KeyValue
 ## 示例
 
 ```java
+import io.github.jxch.capital.rocksdb.config.RocksDBAutoConfig;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.map.repository.config.EnableMapRepositories;
+
+@Configuration
+@EnableMapRepositories(keyValueTemplateRef = RocksDBAutoConfig.ROCKSDB_KV_TEMPLATE)
+public class config {
+}
+```
+
+```java
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

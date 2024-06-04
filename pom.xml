@@ -6,7 +6,7 @@
 
     <groupId>io.github.jxch</groupId>
     <artifactId>capital-rocksdb-keyvalue-spring-boot-starter</artifactId>
-    <version>3.2.5-alpha.1.1.0</version>
+    <version>3.2.5-alpha.2.1.0</version>
     <name>capital-rocksdb-keyvalue-spring-boot-starter</name>
     <description>RocksDB 集成 Spring Data KeyValue</description>
     <url>https://github.com/jxch-capital/capital-rocksdb-keyvalue-spring-boot-starter</url>
