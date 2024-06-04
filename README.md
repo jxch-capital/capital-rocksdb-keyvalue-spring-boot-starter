@@ -69,6 +69,5 @@ public class RocksdbTemplateTest {
 <dependency>
     <groupId>io.github.jxch</groupId>
     <artifactId>capital-rocksdb-keyvalue-spring-boot-starter</artifactId>
-    <version>3.2.5-alpha.1.1.0</version>
 </dependency>
 ```
